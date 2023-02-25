@@ -1,0 +1,28 @@
+#ifndef _EMPLOYEE_H_
+#define _EMPLOYEE_H_
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+// 사원 객체의 속성 및 제어를 위한 클래스
+class Employee
+{
+protected:
+	string name;
+	int salary;
+public:
+	Employee(string name, int money);
+ 
+ 	string getName() const;
+	int getPay() const;
+	void showSalary() const;
+};
+
+class PermanentWorker: public Employee
+{
+public:
+	PermanentWorker(string name, int money): Employee(name, money) {};
+};
+
+#endif
